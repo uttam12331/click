@@ -1582,5 +1582,5 @@ def test_progressbar_update_min_steps_shows_final_pos(runner, monkeypatch):
     frames = [f for f in result.split(chr(13)) if f.strip()]
     assert frames, "Expected at least one rendered frame"
     assert "20/20" in frames[-1], (
-        "Expected '20/20' in final frame, got: {!r}".format(frames[-1])
+        f"Expected '20/20' in final frame, got: {frames[-1]!r}"
     )
